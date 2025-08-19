@@ -17,7 +17,7 @@ const iconFor = (sym) => {
     SOL: "solana.png",
     BNB: "binance.png",
     ADA: "cardano.png",
-    XRP: "xrp1.png",
+    XRP: "xrp.png",
     DOGE: "dogecoin.png",
     DOT: "polkadot.png",
     MATIC: "polygon.png",
