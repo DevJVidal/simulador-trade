@@ -1,39 +1,39 @@
-# 📊 Simulador de Trade — Cripto
+# 📊 Crypto Trading Simulator
 
-Bem-vindo ao **Hyper Zentrix** 🚀  
-Um projeto em **HTML, CSS e JavaScript puro** que simula operações de trade em criptomoedas, trazendo gráficos em tempo real, histórico de ordens e estatísticas de desempenho.
-
----
-
-## 🎯 Objetivo do Projeto
-O intuito do projeto é **praticar e demonstrar conceitos de frontend e lógica de programação**, simulando o ambiente de uma plataforma de trading de criptomoedas.  
-Ele serve como base de estudo para manipulação de DOM, eventos em tempo real e responsividade.
+Welcome to **Hyper Zentrix** 🚀  
+A project in **pure HTML, CSS, and JavaScript** that simulates cryptocurrency trading operations, providing real-time charts, order history, and performance statistics.
 
 ---
 
-## 🛠️ Ferramentas Utilizadas
-Este projeto foi construído **sem frameworks**, utilizando apenas:
-- 🖼️ **HTML5** → Estrutura da aplicação  
-- 🎨 **CSS3** → Estilização e responsividade  
-- ⚡ **JavaScript (ES6+)** → Lógica de simulação, gráficos e interatividade  
+## 🎯 Project Objective
+The aim of the project is **practice and demonstrate front-end concepts and programming logic.**, Simulating the environment of a cryptocurrency trading platform.
+It serves as a basis for studying DOM manipulation, real-time events, and responsiveness.
 
 ---
 
-## 📌 Funcionalidades
-- 📈 **Gráfico em tempo real** das moedas simuladas  
-- 💰 **Envio de ordens** (compra/venda) com controle de alavancagem  
-- 📜 **Histórico de trades** detalhado  
-- 🪙 **Seleção de diferentes ativos** para simulação  
-- 📱 **Layout totalmente responsivo** (mobile e desktop)  
+## 🛠️ Tools Used
+This project was built **no frameworks**, using only:
+- 🖼️ **HTML5** → Application structure  
+- 🎨 **CSS3** → Styling and responsiveness  
+- ⚡ **JavaScript (ES6+)** → Simulation logic, graphics, and interactivity  
 
 ---
 
-## 👨‍💻 Autor
-Desenvolvido por **Janderson Vidal**  
-🔵 Projeto em constante evolução 🔴  
+## 📌 Features
+- 📈 **Real-time chart** of simulated currencies 
+- 💰 **Sending orders** (buy/sell) with leverage control
+- 📜 **Trade history** detailed  
+- 🪙 **Selection of different assets** for simulation
+- 📱 **Fully responsive layout** (mobile and desktop)
 
 ---
 
-## ⭐ Contribuição
-Se você curtiu o projeto, não esqueça de deixar uma ⭐ no repositório!  
-Sugestões e melhorias são sempre bem-vindas 😉  
+## 👨‍💻 Author
+Developed by **Janderson Vidal**  
+🔵 Constantly evolving project 🔴  
+
+---
+
+## ⭐ Contribution
+If you enjoyed the project, don't forget to leave a ⭐ on the repository! 
+Suggestions and improvements are always welcome 😉
