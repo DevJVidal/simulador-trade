@@ -8,7 +8,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
   <link rel="apple-touch-icon" href="./assets/favicon.ico">
-
 </head>
 <body>
   <div class="app-shell">
@@ -52,8 +51,80 @@
       </div>
     </header>
 
+    <!-- BARRA DE ATIVOS (mantido id coinsBar para JS) -->
+    <div class="coins-bar asset-bar" id="coinsBar">
+      <button class="asset-pill active" data-symbol="BTCUSDT">
+        <span class="asset-icon btc">₿</span>
+        <span class="asset-label">BTC</span>
+        <span class="asset-quote">USDT</span>
+      </button>
 
-    <div class="coins-bar" id="coinsBar"></div>
+      <button class="asset-pill" data-symbol="ETHUSDT">
+        <span class="asset-icon eth">Ξ</span>
+        <span class="asset-label">ETH</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="SOLUSDT">
+        <span class="asset-icon sol">◎</span>
+        <span class="asset-label">SOL</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="BNBUSDT">
+        <span class="asset-icon bnb">Ⓑ</span>
+        <span class="asset-label">BNB</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="ADAUSDT">
+        <span class="asset-icon ada">A</span>
+        <span class="asset-label">ADA</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="XRPUSDT">
+        <span class="asset-icon xrp">X</span>
+        <span class="asset-label">XRP</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="DOGEUSDT">
+        <span class="asset-icon doge">Ð</span>
+        <span class="asset-label">DOGE</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="DOTUSDT">
+        <span class="asset-icon dot">●</span>
+        <span class="asset-label">DOT</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="MATICUSDT">
+        <span class="asset-icon matic">M</span>
+        <span class="asset-label">MATIC</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="AVAXUSDT">
+        <span class="asset-icon avax">A</span>
+        <span class="asset-label">AVAX</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="ATOMUSDT">
+        <span class="asset-icon atom">⚛</span>
+        <span class="asset-label">ATOM</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+
+      <button class="asset-pill" data-symbol="NEARUSDT">
+        <span class="asset-icon near">N</span>
+        <span class="asset-label">NEAR</span>
+        <span class="asset-quote">USDT</span>
+      </button>
+    </div>
 
     <main class="grid">
       <section class="card chart-card">
@@ -64,10 +135,15 @@
             <small id="priceChange">0,00% 24h</small>
           </div>
         </div>
-        <canvas id="chart" width="1200" height="420"></canvas>
+
+        <!-- WRAPPER DO GRÁFICO PARA EFEITOS DE FUNDO/GRID -->
+        <div class="chart-container">
+          <canvas id="chart" width="1200" height="420"></canvas>
+        </div>
       </section>
 
-      <section class="card">
+      <!-- CARD DE ORDEM APRIMORADO -->
+      <section class="card order-card">
         <div class="card-head">
           <h2>Ordem</h2>
         </div>
@@ -107,34 +183,59 @@
           </div>
         </form>
 
-        <div class="stats">
-          <div><span class="label">Saldo (USDT)</span><strong id="cash">10000.00</strong></div>
-          <div><span class="label">Valor da Posição</span><strong id="posVal">0.00</strong></div>
-          <div><span class="label">P/L Não Realizado</span><strong id="unrealized">0.00</strong></div>
-          <div><span class="label">Equity</span><strong id="equity">10000.00</strong></div>
+        <!-- NOVA FAIXA DE MÉTRICAS DA ORDEM -->
+        <div class="order-stats-strip">
+          <div class="order-stats-item">
+            <span class="order-stats-label">Saldo (USDT)</span>
+            <span class="order-stats-value" id="cash">10000.00</span>
+          </div>
+          <div class="order-stats-item">
+            <span class="order-stats-label">Valor da Posição</span>
+            <span class="order-stats-value" id="posVal">0.00</span>
+          </div>
+          <div class="order-stats-item">
+            <span class="order-stats-label">P/L Não Realizado</span>
+            <span class="order-stats-value" id="unrealized">0.00</span>
+          </div>
+          <div class="order-stats-item">
+            <span class="order-stats-label">Equity</span>
+            <span class="order-stats-value" id="equity">10000.00</span>
+          </div>
         </div>
       </section>
 
-      <section class="card">
+      <!-- HISTÓRICO DE TRADES PREPARADO PARA NOVO ESTILO -->
+      <section class="card history-card">
         <div class="card-head"><h2>Histórico de Trades</h2></div>
-        <table class="table" id="tradesTable">
-          <thead>
-            <tr><th>Time</th><th>Ativo</th><th>Lado</th><th>Qtd</th><th>Preço</th><th>P/L</th></tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="table" id="tradesTable">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Ativo</th>
+                <th>Lado</th>
+                <th>Qtd</th>
+                <th>Preço</th>
+                <th>P/L</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </section>
     </main>
 
-    <footer class="foot">
-      <div class="badge">
-        <span class="dot red"></span>
-        PROJETO EM CONSTANTE EVOLUÇÃO 🚀
-      </div>
-      <div class="badge">
-        <span class="dot blue"></span>
-        Desenvolvido por Janderson Vidal. 🧑🏻‍💻
-      </div>
+    <!-- FOOTER EM FORMATO DE PILLS -->
+    <footer class="app-footer">
+      <span class="footer-pill">
+        <span class="footer-pill-icon">🚀</span>
+        PROJETO EM CONSTANTE EVOLUÇÃO
+      </span>
+      <span class="footer-pill">
+        <span class="footer-pill-icon">👨‍💻</span>
+        Desenvolvido por Janderson Vidal
+      </span>
+    </footer>
   </div>
 
   <script type="module" src="./app.js"></script>
