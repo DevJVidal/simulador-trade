@@ -242,8 +242,8 @@ input[type="range"]{width:100%; max-width:180px;}
 .asset-pill{
   display:inline-flex;
   align-items:center;
-  gap:6px;
-  padding:6px 12px;
+  gap:8px;                 /* mais espaço entre ícone e texto */
+  padding:6px 14px;        /* um pouco mais “cheio” */
   border-radius:999px;
   border:1px solid rgba(26,36,68,.9);
   background:radial-gradient(circle at top left, rgba(15,23,42,.95), #020617);
@@ -267,15 +267,23 @@ input[type="range"]{width:100%; max-width:180px;}
              0 12px 28px rgba(3,10,26,.9);
 }
 
+/* ===== Ícones das moedas (design novo) ===== */
 .asset-icon{
-  width:18px;
-  height:18px;
-  border-radius:999px;
+  width:24px;
+  height:24px;
+  border-radius:50%;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  font-size:.75rem;
-  font-weight:600;
+  font-size:.88rem;
+  font-weight:700;
+  color:#ffffff;
+  box-shadow:
+    0 0 6px rgba(0, 0, 0, 0.6),
+    inset 0 0 6px rgba(255, 255, 255, 0.15);
+  border:1px solid rgba(255,255,255,0.08);
+  padding-top:1px; /* ajuste óptico */
+  text-shadow:0 1px 3px rgba(0,0,0,0.55);
 }
 
 .asset-label{
@@ -290,18 +298,42 @@ input[type="range"]{width:100%; max-width:180px;}
 }
 
 /* cores por ativo (ajuste como quiser) */
-.asset-icon.btc{background:linear-gradient(135deg,#f59e0b,#f97316);}
-.asset-icon.eth{background:linear-gradient(135deg,#6366f1,#a855f7);}
-.asset-icon.sol{background:linear-gradient(135deg,#22c55e,#14b8a6);}
-.asset-icon.bnb{background:linear-gradient(135deg,#facc15,#eab308);}
-.asset-icon.ada{background:linear-gradient(135deg,#38bdf8,#0ea5e9);}
-.asset-icon.xrp{background:linear-gradient(135deg,#4b5563,#9ca3af);}
-.asset-icon.doge{background:linear-gradient(135deg,#eab308,#fbbf24);}
-.asset-icon.dot{background:linear-gradient(135deg,#ec4899,#f97316);}
-.asset-icon.matic{background:linear-gradient(135deg,#a855f7,#6366f1);}
-.asset-icon.avax{background:linear-gradient(135deg,#f97373,#ef4444);}
-.asset-icon.atom{background:linear-gradient(135deg,#22d3ee,#0ea5e9);}
-.asset-icon.near{background:linear-gradient(135deg,#4ade80,#22c55e);}
+.asset-icon.btc{
+  background:radial-gradient(circle at 40% 35%, #fbbf24, #f59e0b 65%, #b45309 100%);
+}
+.asset-icon.eth{
+  background:radial-gradient(circle at 40% 35%, #94a3b8, #64748b 60%, #334155 100%);
+}
+.asset-icon.sol{
+  background:radial-gradient(circle at 40% 35%, #22d3ee, #14b8a6 65%, #0d9488 100%);
+}
+.asset-icon.bnb{
+  background:radial-gradient(circle at 40% 35%, #facc15, #eab308 60%, #b45309 100%);
+}
+.asset-icon.ada{
+  background:radial-gradient(circle at 40% 35%, #38bdf8, #0ea5e9 60%, #0369a1 100%);
+}
+.asset-icon.xrp{
+  background:radial-gradient(circle at 40% 35%, #cbd5e1, #94a3b8 60%, #475569 100%);
+}
+.asset-icon.doge{
+  background:radial-gradient(circle at 40% 35%, #fcd34d, #fbbf24 60%, #b45309 100%);
+}
+.asset-icon.dot{
+  background:radial-gradient(circle at 40% 35%, #ec4899, #db2777 60%, #9d174d 100%);
+}
+.asset-icon.matic{
+  background:radial-gradient(circle at 40% 35%, #a855f7, #7c3aed 60%, #5b21b6 100%);
+}
+.asset-icon.avax{
+  background:radial-gradient(circle at 40% 35%, #f87171, #ef4444 60%, #b91c1c 100%);
+}
+.asset-icon.atom{
+  background:radial-gradient(circle at 40% 35%, #22d3ee, #0284c7 70%, #075985 100%);
+}
+.asset-icon.near{
+  background:radial-gradient(circle at 40% 35%, #4ade80, #22c55e 60%, #15803d 100%);
+}
 
 /* ===== Faixa de métricas (Saldo, Posição, P/L, Equity) ===== */
 .order-card .card-title{
